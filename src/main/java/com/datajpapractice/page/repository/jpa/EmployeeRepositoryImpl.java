@@ -43,7 +43,7 @@ EmployeeRepository{
 	@Override
 	public List<Employee> findEmployeeById(Integer id) {
 		String hql = "SELECT e FROM Employee e WHERE e.id = :id";
-        TypedQuery<Employee> query = em.createQuery(hql, Employee.class);
+        TypedQuery<Employee> query = em.createQuery(hql, Employee.class );
         query.setParameter("id", id);
         return query.getResultList();
        
